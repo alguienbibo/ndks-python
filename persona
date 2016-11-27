@@ -1,0 +1,43 @@
+#!/usr/bin/env python
+
+# -*- coding: utf-8 -*-
+
+class persona:
+    def __int__(self, energia, hambre):
+        self.energia=energia
+        self.hambre=hambre
+        print 'Se ha creado una persona'
+       
+    def comer_lentejas(self, platos_lentejas):
+        self.hambre += platos_lentejas
+        print 'Mmm... lentejas!!!'
+        #La persona come para recuperar energia
+        
+    def pegar(self):
+        print 'auch!'
+        #Se le pega a la persona
+        
+    def jugar(self):
+        if self.energia <= 0 or self.hambre <= 1:
+            print 'No me apetece jugar'
+            
+        else:
+            self.energia -= 1
+            self.hambre -= 2
+            print 'Que divertido!'
+            #La persona jugara si tiene suficiente energia
+            
+    def dormir(self, horas):
+        self.energia += horas
+        print 'Me voy a la cama'
+        print 'zzzzz'
+        #La persona recuperara energia al dormir
+       
+#Se le asigna un valor habre y energia inicial, en este caso sera 5
+persona(5, 5)
+persona.jugar()
+persona.pegar()
+persona.comer_lentejas(2)
+persona.dormir(2)
+    
+    
